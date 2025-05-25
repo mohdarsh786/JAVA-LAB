@@ -65,54 +65,62 @@ public class temp1
         }
 
         while (true) 
+{
+    System.out.println("\n1. Print depositor info\n2. Deposit\n3. Withdraw\n4. Change Address\n5. Exit");
+    System.out.print("Choose an option: ");
+    int choice = data.nextInt();
+    data.nextLine();
+
+    if (choice == 5) break;
+
+    System.out.print("Enter Account Number: ");
+    int accNum = data.nextInt();
+    data.nextLine();
+    Bank account = null;
+
+    for (int i = 0; i < n; i++) 
+    {
+        if (accounts[i].getAccountNumber() == accNum) 
         {
-            System.out.println("\n1. Print depositor info\n2. Deposit\n3. Withdraw\n4. Change Address\n5. Exit");
-            System.out.print("Choose an option: ");
-            int choice = data.nextInt();
-            data.nextLine();
-
-            if (choice == 5) break;
-
-            System.out.print("Enter Account Number: ");
-            int accNum = data.nextInt();
-            data.nextLine();
-            Bank account = null;
-
-            for (int i = 0; i < n; i++) 
-            {
-                if (accounts[i].getAccountNumber() == accNum) 
-                {
-                    account = accounts[i];
-                    break;
-                }
-            }
-            switch (choice) 
-            {
-                case 1:
-                    account.displayInfo();
-                    break;
-                case 2:
-                    System.out.print("Enter deposit amount: ");
-                    double deposit = data.nextDouble();
-                    account.deposit(deposit);
-                    account.displayInfo();
-                    break;
-                case 3:
-                    System.out.print("Enter withdrawal amount: ");
-                    double withdraw = data.nextDouble();
-                    account.withdraw(withdraw);
-                    account.displayInfo();
-                    break;
-                case 4:
-                    System.out.print("Enter new address: ");
-                    String newAddress = data.nextLine();
-                    account.changeAddress(newAddress);
-                    account.displayInfo();
-                    break;
-                default:
-                    System.out.println("Invalid choice.");
-            }
+            account = accounts[i];
+            break;
         }
+    }
+
+    if (account == null) {
+        System.out.println("Account number not found.");
+        continue;
+    }
+
+    switch (choice) 
+    {
+        case 1:
+            account.displayInfo();
+            break;
+        case 2:
+            System.out.print("Enter deposit amount: ");
+            double deposit = data.nextDouble();
+            data.nextLine(); // consume newline
+            account.deposit(deposit);
+            account.displayInfo();
+            break;
+        case 3:
+            System.out.print("Enter withdrawal amount: ");
+            double withdraw = data.nextDouble();
+            data.nextLine(); // consume newline
+            account.withdraw(withdraw);
+            account.displayInfo();
+            break;
+        case 4:
+            System.out.print("Enter new address: ");
+            String newAddress = data.nextLine();
+            account.changeAddress(newAddress);
+            account.displayInfo();
+            break;
+        default:
+            System.out.println("Invalid choice.");
+    }
+}
         data.close();
     }
 }

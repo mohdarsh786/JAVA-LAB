@@ -25,7 +25,8 @@ public class P23
         }
 
         alternate(list1, list2, list3);
-        System.out.println("Alternate List " + list3);
+        System.out.println("Alternate List: " + list3);
+        data.close();
     }
 
     public static void alternate(ArrayList<Integer> list1, ArrayList<Integer> list2, ArrayList<Integer> list3)

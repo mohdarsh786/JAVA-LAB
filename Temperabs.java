@@ -38,8 +38,10 @@ public class Temperabs
         f.setTempData(fahren);
         f.changeTemp();
         Celsius c = new Celsius();
+        System.out.println("Enter the Celsius temperature: ");
         double cel=data.nextDouble();
         c.setTempData(cel);
         c.changeTemp();
+        data.close();
     }
 }

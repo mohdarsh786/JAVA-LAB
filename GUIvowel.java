@@ -12,7 +12,7 @@ public class GUIvowel extends JFrame
     private JButton exitButton;
 
     public GUIvowel()
-    {
+    { 
         createView();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(400,150);

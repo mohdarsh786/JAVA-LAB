@@ -7,11 +7,11 @@ public class replace0with1
         System.out.print("Enter a number: ");
         int num = scanner.nextInt();
         int result = 0, place = 1;
+        int originalNum = num; // Save original for zero check
+
         if (num == 0) {
             result = 1;
         }  
-
-        
         else 
         {
             while (num > 0) {

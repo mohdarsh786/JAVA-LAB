@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 public class GUIcountbutton extends JFrame 
-{
+{ 
     private int count = 0;
     private JTextField countField;
     public GUIcountbutton() 
