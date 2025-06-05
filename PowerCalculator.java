@@ -1,5 +1,5 @@
 import java.util.*;
-class MyCalculator {
+class MyCalculator z{
     public int power(int n, int p) throws Exception 
     {
         if (n < 0 || p < 0) 

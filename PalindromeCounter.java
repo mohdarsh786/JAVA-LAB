@@ -9,7 +9,8 @@ public class PalindromeCounter
             File file = new File("input.txt");
             Scanner sc = new Scanner(file);
 
-            while (sc.hasNext()) {
+            while (sc.hasNext()) 
+            {
                 String word = sc.next();
                 if (isPalindrome(word)) 
                 {
@@ -19,7 +20,8 @@ public class PalindromeCounter
 
             System.out.println("Number of palindromes: " + count);
 
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) 
+        {
             System.out.println("File not found.");
         }
     }
@@ -29,7 +31,8 @@ public class PalindromeCounter
         word = word.toUpperCase();
         int i = 0;
         int j = word.length() - 1;
-        while (i < j) {
+        while (i < j) 
+        {
             if (word.charAt(i) != word.charAt(j)) 
             {
                 return false;

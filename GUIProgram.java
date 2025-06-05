@@ -54,7 +54,7 @@ class MyWindow extends JFrame implements ActionListener, MouseListener
         }
     }
     public void mouseEntered(MouseEvent me) 
-    {
+    { 
         if (me.getSource() == b1) 
         {
             b1.setBackground(Color.RED);

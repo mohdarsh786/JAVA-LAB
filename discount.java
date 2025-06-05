@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-class discount {
-    public static void main(String[] st) {
+class discount 
+{
+    public static void main(String[] st) 
+    {
         Scanner data = new Scanner(System.in);
         String name, address, type;
         double amount, disc = 0;
@@ -22,7 +24,8 @@ class discount {
         System.out.println("Name: " + name);
         System.out.println("Address: " + address);
 
-        switch (type) {
+        switch (type) 
+        {
             case "L":
                 if (amount <= 25000) {
                     System.out.println("Amount after discount: " + amount);

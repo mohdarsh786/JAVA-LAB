@@ -116,4 +116,4 @@ public class GUISQL extends JFrame implements ActionListener
             JOptionPane.showMessageDialog(null, "MySQL JDBC Driver not found.");
         }
     }
-}
+}  
